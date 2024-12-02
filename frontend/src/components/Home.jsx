@@ -1,32 +1,27 @@
+import { NavLink } from 'react-router-dom';
 import myProfile from '../assets/profile.jpeg';
 
 const Home = () => {
   return (
-    <div>
-      <div className="h-screen w-screen flex items-center cursor-pointer sm:flex-col gap-[4rem] lg:flex-row">
-        <img
-          className="w-[8rem] sm:w-[100%] lg:w-[50%]"
-          src={myProfile}
-          alt=""
-        />
-        <div className="text-4xl uppercase group">
-          <ul className="flex items-center justify-center gap-[3rem] sm:flex-row md:flex-col lg:flex-col">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Work</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
+    <div className="transition-duration: 150ms">
+      <div className="flex flex-col items-center justify-center scale-90 md:flex-row md:scale-75 md:w-full md:h-screen lg:scale-75 group">
+        {/* Image Section */}
+        <div>
+          <img className="cursor-pointer" src={myProfile} alt="Profile" />
+        </div>
+
+        {/* Hidden UL Section */}
+        <div className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+          <ul className="flex items-center justify-center gap-4 text-3xl md:text-4xl md:flex-col md:gap-[5rem] lg:text-6xl">
+            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/work">Work</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </ul>
         </div>
       </div>
     </div>
   );
 };
+
 export default Home;
