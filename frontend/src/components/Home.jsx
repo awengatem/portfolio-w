@@ -7,7 +7,7 @@ const Home = () => {
       <div className="group relative w-full h-screen flex flex-col items-center justify-center scale-75 gap-[5rem] md:flex-row md:scale-50 md:gap-[10rem] lg:flex-row lg:scale-50">
         {/* Image */}
         <img
-          className="cursor-pointer border-2 md:transition-all md:duration-300 md:group-hover:scale-110"
+          className="cursor-pointer md:transition-all md:duration-300 md:group-hover:scale-110"
           src={myProfile}
           alt=""
         />
